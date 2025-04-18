@@ -57,7 +57,7 @@ Resources:
   MySecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Allow SSH and HTTP
+      GroupDescription: Allow SSH, HTTP, and 8080
       VpcId: !Ref MyVPC
       SecurityGroupIngress:
         - IpProtocol: tcp
@@ -80,8 +80,8 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: t2.micro
-      KeyName: my-demo-keypair            # 🔁 Replace with your actual keypair name
-      ImageId: ami-0e449927258d45bc4      # 🔁 Replace if needed for your region
+      KeyName: my-demo-keypair  # 🔧 Replace with your actual EC2 key pair name
+      ImageId: ami-0e449927258d45bc4  # 🔧 Replace if needed based on your region
       NetworkInterfaces:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0
