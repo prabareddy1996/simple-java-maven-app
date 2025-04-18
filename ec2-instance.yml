@@ -80,8 +80,8 @@ Resources:
     Type: AWS::EC2::Instance
     Properties:
       InstanceType: t2.micro
-      KeyName: my-demo-keypair  # 🔧 Replace with your actual EC2 key pair name (no .pem)
-      ImageId: ami-0e449927258d45bc4  # 🔧 Replace if needed based on your region
+      KeyName: my-demo-keypair  # Replace with your actual EC2 key pair name (no .pem)
+      ImageId: ami-0e449927258d45bc4  # Replace if needed based on your region
       NetworkInterfaces:
         - AssociatePublicIpAddress: true
           DeviceIndex: 0
