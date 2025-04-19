@@ -91,9 +91,9 @@ Resources:
       Tags:
         - Key: Name
           Value: MavenAppEC2
-  UserData:
-    Fn::Base64: !Sub |
-    #!/bin/bash
-    yum update -y
-    yum install -y java-1.8.0-openjdk
-    mkdir -p /opt/mavenapp
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          yum update -y
+          yum install -y java-1.8.0-openjdk
+          mkdir -p /opt/mavenapp
