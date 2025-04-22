@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    options {
-        skipStagesAfterUnstable()
+     tools {
+        maven 'M3'   // 👈 Tells Jenkins to use the Maven tool named "M3"
     }
     stages {
         stage('Build') {
